@@ -4,6 +4,18 @@
         <title>Search for APT</title>
     </HEAD>
     <BODY>
-
+        <form action="/action_page.php">
+            <input type="text" name="name">
+            <input list="Criteria" name="item">
+            <datalist id="Criteria">
+                <option value="Name"></option>
+                <option value="TTP"></option>
+                <option value="Target"></option>
+                <option value="Toolset"></option>
+                <option value="Modus Operandi"></option>
+                <option value="Reference"></option>
+            </datalist>
+            <input type="submit" value="Search">
+        </form>
     </BODY>
 </HTML>

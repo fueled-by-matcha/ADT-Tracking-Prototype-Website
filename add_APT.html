@@ -5,10 +5,13 @@
     </HEAD>
     <BODY>
         <FORM>
-            Common Names:<br>
-            <input type="text" name="commonNames"><br>
-            Alternate Names:<br>
-            <input type="text" name="alternateNames"><br>
+            <fieldset>
+                <legend>Names for APT:</legend>
+                Common Names:<br>
+                <input type="text" name="commonNames"><br>
+                Alternate Names:<br>
+                <input type="text" name="alternateNames"><br>
+            </fieldset>
             TTPs:<br>
             <input type ="text" name="ttps"><br>
             Targets:<br>
@@ -21,6 +24,8 @@
             <input type="text" name="references"><br>
             Comments:<br>
             <input type="text" name="comments"><br>
+            <input type="submit" value="Submit" onclick="alert('Data updated.')">
         </FORM>
+        <button type="button">Back to Home</button>
     </BODY>
 </HTML>

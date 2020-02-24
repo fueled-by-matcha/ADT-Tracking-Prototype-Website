@@ -2,6 +2,15 @@
 <HTML>
     <HEAD>
         <title>Add APT</title>
+        <script type = "text/javascript">
+            function formcheck(){
+                var fields = $(".ss-item-required").find("text").serializeArray();
+                $.each(fields, function(i,field){
+                    if(!field.value)
+                    alert(field.name + ' is required')
+                });
+            }
+        </script>
     </HEAD>
     <BODY>
         <FORM>
@@ -24,7 +33,7 @@
             <input type="text" name="references" required><br>
             Comments:<br>
             <input type="text" name="comments" required><br>
-            <input type="submit" value="Submit" onclick="alert('Data updated.')">
+            <input type="submit" value="Submit"  onclick="formcheck(); return false">
         </FORM>
         <button type="button">Back to Home</button>
     </BODY>

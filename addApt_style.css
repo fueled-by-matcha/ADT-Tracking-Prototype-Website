@@ -1,4 +1,4 @@
-#req::after{
-    content: "*";
+#req{
+    content:after "*";
     color:red;
 }

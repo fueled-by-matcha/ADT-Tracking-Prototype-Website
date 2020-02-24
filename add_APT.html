@@ -4,16 +4,16 @@
         <title>Add APT</title>
         <script type = "text/javascript">
             function formcheck(){
-                var fields = $(".ss-item-required").find("text").serializeArray();
-                $.each(fields, function(i,field){
-                    if(!field.value)
-                    alert(field.name + ' is required')
-                });
+                var x = document.forms["aptForm"]["commonNames","ttps","targets","toolsets","modusOp","references"].value;
+                if(x == ""){
+                    alert("Please fill all required fields");
+                    return false;
+                }
             }
         </script>
     </HEAD>
     <BODY>
-        <FORM>
+        <FORM name = "aptForm" onsubmit="formcheck()" method = "post">
             <fieldset>
                 <legend>Names for APT:</legend>
                 Common Names:<br>
@@ -33,7 +33,7 @@
             <input type="text" name="references" required><br>
             Comments:<br>
             <input type="text" name="comments" ><br>
-            <input type="submit" value="Submit"  onclick="formcheck(); alert('Data has been submitted')">
+            <input type="submit" value="Submit"  onclick="alert('Data has been submitted')">
         </FORM>
         <button type="button">Back to Home</button>
     </BODY>

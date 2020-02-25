@@ -63,25 +63,36 @@
                 <label for="alternateNames">Alternate Names:</label>
                 <input type="text" class= "form-control" name="alternateNames" id="alternateNames" placeholder="Enter any alternate names">
             </div>
-            <abbr title="Tactics, Techniques, and Protocols">TTPs:</abbr><br>
-            <input type ="text" name="ttps" ><br>
-            Target Sector:<br>
-            <input type ="text" name="targets" ><br>
-            Attack Vector:<br>
-            <input type="text" name="attack"><br>
-            Toolsets:<br>
-            <input type = "text" name="toolsets" ><br>
-            Modus Operandi:<br>
-            <input type="text" name="modusOp" ><br>
-            Associated Malware:<br>
-            <input type="text" name="malware"><br>
+            <div class="form-group">
+                <label for="ttps"><abbr title="Tactics, Techniques, and Protocols">TTPs:</abbr></label>
+                <input type ="text" name="ttps" class="form-control" id="ttps" placeholder="Enter TTPs (required)" >
+            </div>
+            <div class="form-group">
+                <label for="targets">Target Sector:</label>
+                <input type ="text" name="targets" class="form-control" id="targets" placeholder="Enter targets (required)">
+            </div>
+            <div class="form-group">
+                <label for="attack">Attack Vector:</label>
+                <input type="text" name="attack" class="form-control" id="attack" placeholder="Enter attack vector (required)">
+            </div>
+            <div class="form-group">
+                <label for="toolsets">Toolsets:</label>
+                <input type = "text" name="toolsets" class="form-control" id="toolsets" placeholder="Enter toolsets (required)">
+            </div>
+            <div class="form-group">
+                <label for="modusOp">Modus Operandi:</label>
+                <input type="text" name="modusOp" class="form-control" id="modusOp" placeholder="Enter modus operandi (required)">
+            </div>
+            <div class="form-group">
+                <label for="malware">Associated Malware:</label>
+                <input type="text" name="malware" class="form-control" id="malware" placeholder="Enter associated malware (required)">
+            </div>
             <div class="form-group">
             References:<br>
-            <input type="text" name="references" class="form-control" placeholder="Enter reference" ><br>
-            <div class="invalid-feedback">Required field.</div>
+            <input type="text" name="references" class="form-control" placeholder="Enter reference" >
             </div>
             Comments:<br>
-            <textarea rows="4" cols="50" name="comments" ></textarea><br>
+            <textarea rows="4" cols="75" name="comments" ></textarea><br>
             <input type="submit" value="Submit" class="btn btn-secondary">
         </FORM>
         </div>

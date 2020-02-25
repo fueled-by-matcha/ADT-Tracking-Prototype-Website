@@ -23,17 +23,45 @@
             }
         </script>
         <link rel="stylesheet" type="text/css" href="addApt_style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </HEAD>
     <BODY>
-        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" >
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">APT Monitoring</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Add APT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="updateApt.html">Update APT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="searchBy.html">Find APT</a>
+                    </li>      
+                </ul>
+            </div>  
+        </nav>
+        <div class="container p-4 my-3">
+        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark">
             <fieldset>
-                <legend>Names for APT:</legend>
+                <legend>New APT</legend>
                 Common Names:<br>
                 <input type="text" name="commonNames" class='req'><br>
                 Alternate Names:<br>
                 <input type="text" name="alternateNames"><br>
             </fieldset>
-            TTPs:<br>
+            <abbr title="Tactics, Techniques, and Protocols">TTPs:</abbr><br>
             <input type ="text" name="ttps" ><br>
             Target Sector:<br>
             <input type ="text" name="targets" ><br>
@@ -48,9 +76,12 @@
             References:<br>
             <input type="text" name="references" ><br>
             Comments:<br>
-            <input type="text" name="comments" ><br>
+            <textarea rows="4" cols="50" name="comments" ></textarea><br>
+            *Required field<br>
             <input type="submit" value="Submit" >
         </FORM>
+        </div>
         <button type="button" onclick="location.href='home.html'">Back to Home</button>
+        <div class="container-fluid bg-grey"></div>
     </BODY>
 </HTML>

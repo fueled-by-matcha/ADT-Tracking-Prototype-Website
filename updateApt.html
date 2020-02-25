@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <title>Update APT</title>
+        <script type = "text/javascript">
+            function formcheck(){
+                var a = document.forms["aptForm"]["commonNames"].value;
+                var b = document.forms["aptForm"]["ttps"].value;
+                var c = document.forms["aptForm"]["targets"].value;
+                var d = document.forms["aptForm"]["toolsets"].value;
+                var e = document.forms["aptForm"]["modusOp"].value;
+                var f = document.forms["aptForm"]["references"].value;
+                var g = document.forms["aptForm"]["attack"].value;
+                var h = document.forms["aptForm"]["malware"].value;
+
+                if(a == "" || b == "" || c=="" || d == "" || e == "" || f == "" || g == "" || h==""){
+                    alert("Please fill all required fields");
+                    return false;
+                }
+                else{
+                    alert("Data has been submitted")
+                }
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="addApt_style.css">
+    </HEAD>
+    <BODY>
+        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" >
+            <fieldset>
+                <legend>Names for APT:</legend>
+                Common Names:<br>
+                <input type="text" name="commonNames" class='req' value ="Titan Rain"><br>
+                Alternate Names:<br>
+                <input type="text" name="alternateNames"value = "Slammer, Welchia, Gruel"><br>
+            </fieldset>
+            TTPs:<br>
+            <input type ="text" name="ttps"value="system call"><br>
+            Target Sector:<br>
+            <input type ="text" name="targets" value="NASA" ><br>
+            Attack Vector:<br>
+            <input type="text" name="attack" value="unknown"><br>
+            Toolsets:<br>
+            <input type = "text" name="toolsets" value="scanner program"><br>
+            Modus Operandi:<br>
+            <input type="text" name="modusOp" value="scanner program" ><br>
+            Associated Malware:<br>
+            <input type="text" name="malware" value="myfip worm"><br>
+            References:<br>
+            <input type="text" name="references" value="https://cyware.com/news/remembering-operation-titan-rain-c54ad3e4"><br>
+            Comments:<br>
+            <textarea rows="4" cols="50" name="comments" ></textarea><br>
+            *Required field<br>
+            <input type="submit" value="Submit" >
+        </FORM>
+        <button type="button" onclick="location.href='home.html'">Back to Home</button>
+    </BODY>
+</HTML>

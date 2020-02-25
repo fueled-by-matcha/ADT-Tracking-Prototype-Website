@@ -52,12 +52,16 @@
                 </ul>
             </div>  
         </nav>
-        <div class="container p-4 my-3">
-        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark">
+        <div class="container p-5 my-3">
+        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark" class="was-validated" >
             <fieldset>
                 <legend>New APT</legend>
-                Common Names:<br>
-                <input type="text" name="commonNames" class='req'><br>
+                <div class="form-group">
+                <label for="commonNames">Common Names:</label><br>
+                <input type="text" class= "form-control" id="commonNames" name="commonNames" placeholder="Enter common name (required)" required><br>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Required field.</div>
+                </div>
                 Alternate Names:<br>
                 <input type="text" name="alternateNames"><br>
             </fieldset>
@@ -73,11 +77,13 @@
             <input type="text" name="modusOp" ><br>
             Associated Malware:<br>
             <input type="text" name="malware"><br>
+            <div class="form-group">
             References:<br>
-            <input type="text" name="references" ><br>
+            <input type="text" name="references" class="form-control" placeholder="Enter reference" required><br>
+            <div class="invalid-feedback">Required field.</div>
+            </div>
             Comments:<br>
             <textarea rows="4" cols="50" name="comments" ></textarea><br>
-            *Required field<br>
             <input type="submit" value="Submit" class="btn btn-secondary">
         </FORM>
         </div>

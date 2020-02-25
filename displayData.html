@@ -11,6 +11,7 @@
                 }
             }
         </script>
+         <link rel="stylesheet" type="text/css" href="displayDataStyle.css">
     </HEAD>
     <BODY>
         <form action="displayData.html" name = "searchform" onsubmit = "return formcheck()" method = "post">
@@ -28,5 +29,29 @@
             <input type="submit" value="Search" >
         </form>
         <button type="button" onclick="location.href='home.html'">Back to Home</button>
+        <table style="width:100%">
+        <tr>
+            <th>Common Name</th>
+            <th>Alternate Name</th>
+            <th>TTPs</th>
+            <th>Target Sector</th>
+            <th>Attack Vector</th>
+            <th>Toolsets</th>
+            <th>Modus Operandi</th>
+            <th>Associated Malware</th>
+            <th>References</th>
+            <th>Comments</th>
+        </tr>
+            <td>Titan rain</td>
+            <td>Slammer, Welchia, Gruel</td>
+            <td>System call</td>
+            <td>NASA</td>
+            <td>unknown</td>
+            <td>scanner program</td>
+            <td>scanner program</td>
+            <td>myfip worm</td>
+            <td>https://cyware.com/news/remembering-operation-titan-rain-c54ad3e4</td>
+            <td>This is a tester</td>
+        </table>
     </BODY>
 </HTML>

@@ -3,13 +3,17 @@
     <HEAD>
         <title>Search for APT</title>
         <script type="text/javascript">
-            function search(){
-                //to fill in
+            function formcheck(){
+                var x = document.forms["searchform"]["name"].value;
+                if(x==""){
+                    alert("Please type in a criteria");
+                    return false;
+                }
             }
         </script>
     </HEAD>
     <BODY>
-        <form action="displayData.html">
+        <form action="displayData.html" name = "searchform" onsubmit = "return formcheck()" method = "post">
             <input type="text" name="name">
             <input list="Criteria" name="item">
             <datalist id="Criteria">

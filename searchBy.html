@@ -15,15 +15,11 @@
     <BODY>
         <form action="displayData.html" name = "searchform" onsubmit = "return formcheck()" method = "post">
             <input type="text" name="name">
-            <input list="Criteria" name="item">
-            <datalist id="Criteria">
-                <option value="Name" selected></option>
-                <option value="TTP"></option>
-                <option value="Target"></option>
-                <option value="Toolset"></option>
-                <option value="Modus Operandi"></option>
-                <option value="Reference"></option>
-            </datalist>
+            <select id = "criteria">
+                <option value ="name" selected>Name</option>
+                <option value = "ttps">TTPs</option>
+                <option value= "target">Target</option>
+            </select>
             <input type="submit" value="Search" >
         </form>
     </BODY>

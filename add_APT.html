@@ -54,17 +54,15 @@
         </nav>
         <div class="container p-5 my-3">
         <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark" class="was-validated" >
-            <fieldset>
-                <legend>New APT</legend>
-                <div class="form-group">
-                <label for="commonNames">Common Names:</label><br>
-                <input type="text" class= "form-control" id="commonNames" name="commonNames" placeholder="Enter common name (required)" required><br>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Required field.</div>
-                </div>
-                Alternate Names:<br>
-                <input type="text" name="alternateNames"><br>
-            </fieldset>
+            <h2>New APT</h2>
+            <div class="form-group">
+                <label for="commonNames">Common Names:</label>
+                <input type="text" class= "form-control" id="commonNames" name="commonNames" placeholder="Enter common name (required)" >
+            </div>
+            <div class="form-group">
+                <label for="alternateNames">Alternate Names:</label>
+                <input type="text" class= "form-control" name="alternateNames" id="alternateNames" placeholder="Enter any alternate names">
+            </div>
             <abbr title="Tactics, Techniques, and Protocols">TTPs:</abbr><br>
             <input type ="text" name="ttps" ><br>
             Target Sector:<br>
@@ -79,7 +77,7 @@
             <input type="text" name="malware"><br>
             <div class="form-group">
             References:<br>
-            <input type="text" name="references" class="form-control" placeholder="Enter reference" required><br>
+            <input type="text" name="references" class="form-control" placeholder="Enter reference" ><br>
             <div class="invalid-feedback">Required field.</div>
             </div>
             Comments:<br>

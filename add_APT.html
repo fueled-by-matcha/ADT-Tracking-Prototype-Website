@@ -11,8 +11,9 @@
                 var e = document.forms["aptForm"]["modusOp"].value;
                 var f = document.forms["aptForm"]["references"].value;
                 var g = document.forms["aptForm"]["attack"].value;
+                var h = document.forms["aptForm"]["malware"].value;
 
-                if(a == "" || b == "" || c=="" || d == "" || e == "" || f == "" || g == ""){
+                if(a == "" || b == "" || c=="" || d == "" || e == "" || f == "" || g == "" || h==""){
                     alert("Please fill all required fields");
                     return false;
                 }
@@ -42,6 +43,8 @@
             <input type = "text" name="toolsets" ><br>
             Modus Operandi:<br>
             <input type="text" name="modusOp" ><br>
+            Associated Malware:<br>
+            <input type="text" name="malware"><br>
             References:<br>
             <input type="text" name="references" ><br>
             Comments:<br>

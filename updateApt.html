@@ -56,48 +56,49 @@
         <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" >
             <h2>Update APT</h2>
             <div class="form-group">
-                Common Names:
-                <input type="text" name="commonNames" class='req' value ="Titan Rain">
+                <label for="commonNames">Common Names:</label>
+                <input type="text" name="commonNames" id="commonNames" class='form-control' value ="Titan Rain">
             </div>
             <div class="form-group">
-                Alternate Names:
-                <input type="text" name="alternateNames"value = "Slammer, Welchia, Gruel">
+                <label for="alternateNames">Alternate Names:</label>
+                <input type="text" name="alternateNames" id="alternateNames" value = "Slammer, Welchia, Gruel" class="form-control">
             </div>
             <div class="form-group">
-                TTPs:
-                <input type ="text" name="ttps"value="system call">
+                <label for="ttps">TTPs:</label>
+                <input type ="text" name="ttps" id="ttps" value="system call" class="form-control">
             </div>
             <div class="form-group">
-                Target Sector:
-                <input type ="text" name="targets" value="NASA" >
+                <label for="targets">Target Sector:</label>
+                <input type ="text" name="targets" id="targets" value="NASA" class="form-control">
             </div>
             <div class="form-group">
-                Attack Vector:
-                <input type="text" name="attack" value="unknown">
+                <label for="attack">Attack Vector:</label>
+                <input type="text" name="attack" id="attack" value="unknown" class="form-control">
             </div>
             <div class="form-group">
-                Toolsets:
-                <input type = "text" name="toolsets" value="scanner program">
+                <label for="toolsets">Toolsets:</label>
+                <input type = "text" name="toolsets" id="toolsets" value="scanner program" class="form-control">
             </div>
             <div class="form-group">
-                Modus Operandi:
-                <input type="text" name="modusOp" value="scanner program" >
+                <label for="modulOp">Modus Operandi:</label>
+                <input type="text" name="modusOp" id="modusOp" value="scanner program" class="form-control">
             </div>
             <div class="form-group">
-                Associated Malware:
-                <input type="text" name="malware" value="myfip worm">
+                <label for="malware">Associated Malware:</label>
+                <input type="text" name="malware" id="malware" value="myfip worm" class="form-control">
             </div>
             <div class="form-group">
-                References:
-                <input type="text" name="references" value="https://cyware.com/news/remembering-operation-titan-rain-c54ad3e4">
+                <label for="references">References:</label>
+                <input type="text" name="references" id="references"  class="form-control" value="https://cyware.com/news/remembering-operation-titan-rain-c54ad3e4">
             </div>
             <div class="form-group">
-                Comments:
-                <textarea rows="4" cols="50" name="comments" ></textarea>
+                <label for="comments">Comments:</label>
+                <textarea rows="4" cols="75" name="comments" id="comments" class="form-control"></textarea>
             </div>
-            <input type="submit" value="Submit" >
+            <input type="submit" value="Submit" class="btn btn-secondary">
         </FORM>
         </div>
-        <button type="button" onclick="location.href='home.html'">Back to Home</button>
+        <button type="button" onclick="location.href='home.html'" class="btn btn-dark">Back to Home</button>
+        <div class="jumbotron bg-grey" style="margin-bottom:0"></div>
     </BODY>
 </HTML>

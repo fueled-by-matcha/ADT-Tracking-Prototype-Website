@@ -22,36 +22,83 @@
                 }
             }
         </script>
-        <link rel="stylesheet" type="text/css" href="addApt_style.css">
+         <link rel="stylesheet" type="text/css" href="addApt_style.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
     </HEAD>
     <BODY>
-        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" >
-            <fieldset>
-                <legend>Names for APT:</legend>
-                Common Names:<br>
-                <input type="text" name="commonNames" class='req' value ="Titan Rain"><br>
-                Alternate Names:<br>
-                <input type="text" name="alternateNames"value = "Slammer, Welchia, Gruel"><br>
-            </fieldset>
-            TTPs:<br>
-            <input type ="text" name="ttps"value="system call"><br>
-            Target Sector:<br>
-            <input type ="text" name="targets" value="NASA" ><br>
-            Attack Vector:<br>
-            <input type="text" name="attack" value="unknown"><br>
-            Toolsets:<br>
-            <input type = "text" name="toolsets" value="scanner program"><br>
-            Modus Operandi:<br>
-            <input type="text" name="modusOp" value="scanner program" ><br>
-            Associated Malware:<br>
-            <input type="text" name="malware" value="myfip worm"><br>
-            References:<br>
-            <input type="text" name="references" value="https://cyware.com/news/remembering-operation-titan-rain-c54ad3e4"><br>
-            Comments:<br>
-            <textarea rows="4" cols="50" name="comments" ></textarea><br>
-            *Required field<br>
-            <input type="submit" value="Submit" >
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">APT Monitoring</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Add APT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="updateApt.html">Update APT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="searchBy.html">Find APT</a>
+                        </li>      
+                    </ul>
+                </div>  
+        </nav>
+        <div class="container p-5 my-3">
+        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark">
+            <h2>Update APT</h2>
+            <div class="form-group">
+                <label for="commonNames">Common Names:</label>
+                <input type="text" name="commonNames" id="commonNames" class='form-control' value ="Titan Rain">
+            </div>
+            <div class="form-group">
+                <label for="alternateNames">Alternate Names:</label>
+                <input type="text" name="alternateNames" id="alternateNames" value = "Slammer, Welchia, Gruel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ttps">TTPs:</label>
+                <input type ="text" name="ttps" id="ttps" value="system call" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="targets">Target Sector:</label>
+                <input type ="text" name="targets" id="targets" value="NASA" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="attack">Attack Vector:</label>
+                <input type="text" name="attack" id="attack" value="unknown" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="toolsets">Toolsets:</label>
+                <input type = "text" name="toolsets" id="toolsets" value="scanner program" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="modulOp">Modus Operandi:</label>
+                <input type="text" name="modusOp" id="modusOp" value="scanner program" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="malware">Associated Malware:</label>
+                <input type="text" name="malware" id="malware" value="myfip worm" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="references">References:</label>
+                <input type="text" name="references" id="references"  class="form-control" value="https://cyware.com/news/remembering-operation-titan-rain-c54ad3e4">
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea rows="4" cols="75" name="comments" id="comments" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary">
         </FORM>
-        <button type="button" onclick="location.href='home.html'">Back to Home</button>
+        </div>
+        <button type="button" onclick="location.href='home.html'" class="btn btn-dark">Back to Home</button>
+        <div class="jumbotron bg-grey" style="margin-bottom:0"></div>
     </BODY>
 </HTML>

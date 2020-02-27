@@ -30,7 +30,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </HEAD>
     <BODY>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a class="navbar-brand" href="#">APT Monitoring</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
                         <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add APT</a>
+                        <a class="nav-link disabled" href="#">Add APT</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="updateApt.html">Update APT</a>
@@ -52,36 +52,53 @@
                 </ul>
             </div>  
         </nav>
-        <div class="container p-4 my-3">
-        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark">
-            <fieldset>
-                <legend>New APT</legend>
-                Common Names:<br>
-                <input type="text" name="commonNames" class='req'><br>
-                Alternate Names:<br>
-                <input type="text" name="alternateNames"><br>
-            </fieldset>
-            <abbr title="Tactics, Techniques, and Protocols">TTPs:</abbr><br>
-            <input type ="text" name="ttps" ><br>
-            Target Sector:<br>
-            <input type ="text" name="targets" ><br>
-            Attack Vector:<br>
-            <input type="text" name="attack"><br>
-            Toolsets:<br>
-            <input type = "text" name="toolsets" ><br>
-            Modus Operandi:<br>
-            <input type="text" name="modusOp" ><br>
-            Associated Malware:<br>
-            <input type="text" name="malware"><br>
+        <div class="container p-5 my-3">
+        <FORM name = "aptForm" action ="home.html" onsubmit="return formcheck()" method = "post" class="text-dark" class="was-validated" >
+            <h2>Add APT</h2>
+            <div class="form-group">
+                <label for="commonNames">Common Names:</label>
+                <input type="text" class= "form-control" id="commonNames" name="commonNames" placeholder="Enter common name (required)" >
+            </div>
+            <div class="form-group">
+                <label for="alternateNames">Alternate Names:</label>
+                <input type="text" class= "form-control" name="alternateNames" id="alternateNames" placeholder="Enter any alternate names">
+            </div>
+            <div class="form-group">
+                <label for="ttps"><abbr title="Tactics, Techniques, and Protocols">TTPs:</abbr></label>
+                <input type ="text" name="ttps" class="form-control" id="ttps" placeholder="Enter TTPs (required)" >
+            </div>
+            <div class="form-group">
+                <label for="targets">Target Sector:</label>
+                <input type ="text" name="targets" class="form-control" id="targets" placeholder="Enter targets (required)">
+            </div>
+            <div class="form-group">
+                <label for="attack">Attack Vector:</label>
+                <input type="text" name="attack" class="form-control" id="attack" placeholder="Enter attack vector (required)">
+            </div>
+            <div class="form-group">
+                <label for="toolsets">Toolsets:</label>
+                <input type = "text" name="toolsets" class="form-control" id="toolsets" placeholder="Enter toolsets (required)">
+            </div>
+            <div class="form-group">
+                <label for="modusOp">Modus Operandi:</label>
+                <input type="text" name="modusOp" class="form-control" id="modusOp" placeholder="Enter modus operandi (required)">
+            </div>
+            <div class="form-group">
+                <label for="malware">Associated Malware:</label>
+                <input type="text" name="malware" class="form-control" id="malware" placeholder="Enter associated malware (required)">
+            </div>
+            <div class="form-group">
             References:<br>
-            <input type="text" name="references" ><br>
-            Comments:<br>
-            <textarea rows="4" cols="50" name="comments" ></textarea><br>
-            *Required field<br>
-            <input type="submit" value="Submit" >
+            <input type="text" name="references" class="form-control" placeholder="Enter reference" >
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea rows="4" cols="75" name="comments" id="comments" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary">
         </FORM>
         </div>
-        <button type="button" onclick="location.href='home.html'">Back to Home</button>
-        <div class="container-fluid bg-grey"></div>
+        <button type="button" class="btn btn-dark" onclick="location.href='home.html'">Back to Home</button>
+        <div class="jumbotron bg-grey" style="margin-bottom:0"></div>
     </BODY>
 </HTML>

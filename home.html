@@ -8,7 +8,7 @@
                 var obj = JSON.parse('data.json');
                 $.getJSON('data.json', function(data) {
                   var tr;
-                  for (var i = 0, i < data.length; i++) {
+                  for (var i = 0; i < data.length; i++) {
                     tr = $('<tr/');
                     for (var j = 0; j < data.legnth[i]; j++){
                       tr.append("<td>" + data[i][j] + "</td>");

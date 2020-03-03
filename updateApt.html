@@ -22,6 +22,15 @@
                 }
             }
         </script>
+        <script>
+                function searchcheck(){
+                    var x = document.forms["searchform"]["name"].value;
+                    if(x==""){
+                        alert("Please type in a criteria");
+                        return false;
+                    }
+                }
+            </script>
          <link rel="stylesheet" type="text/css" href="addApt_style.css">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,7 +57,7 @@
                                 </li>   
                             </ul>
                             <div class="topnav-right">
-                            <form class="form-inline my-2 my-lg-0 " action="displayData.html" name = "searchform" onsubmit = "return formcheck()" method = "post">
+                            <form class="form-inline my-2 my-lg-0 " action="displayData.html" name = "searchform" onsubmit = "return searchcheck()" method = "post">
                                 <input class="form-control col-xs-6 col-sm-4" type="text" name="name" placeholder="Search">
                                 <select class="form-control col-xs-6 col-sm-4" id = "criteria">
                                     <option value ="name" selected>Name</option>
